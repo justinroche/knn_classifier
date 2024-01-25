@@ -44,7 +44,7 @@ class KNNClassifier:
         return count / len(predicted_labels)
 
     @staticmethod
-    def split_data_label_from_file(file_path: str):
+    def split_data_label_from_file(file_path: str, delimiter: str = ", "):
 
         try:
             with open(file_path, "r") as fileio:
@@ -52,7 +52,7 @@ class KNNClassifier:
 
                 # Data array contains all but last column
                 data = np.array(
-                    [list(map(float, line.split(",")[:-1])) for line in lines]
+                    [list(map(float, line.split(delimiter)[:-1])) for line in lines]
                 )
 
                 # Label array contains last column
