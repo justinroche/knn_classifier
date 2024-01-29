@@ -8,8 +8,8 @@ def main():
 
     # Split the train and test files into data and label arrays.
     # Specify the delimiter.
-    train_data, train_label = KNNClassifier.split_data_label_from_file("data/wine_train.txt", ",")
-    test_data, test_label = KNNClassifier.split_data_label_from_file("data/wine_test.txt", ",")
+    train_data, train_label = KNNClassifier.split_data_label_from_file("data/new_train_1.txt", ",")
+    test_data, test_label = KNNClassifier.split_data_label_from_file("data/new_test_1.txt", ",")
 
     # Fit the classifier to the train data and labels.
     classifier.fit(train_data, train_label)
