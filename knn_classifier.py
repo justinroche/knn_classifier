@@ -5,16 +5,18 @@ from statistics import mode
 class KNNClassifier:
 
     def __init__(self):
-        # Initialize the training arrays.
+        """Initialize the classifier."""
         self.fit_data = None
         self.fit_label = None
 
     def fit(self, training_data: np.ndarray, training_label: np.ndarray):
-        # Store the training data and labels.
+        """Fit the classifier with the training arrays."""
         self.fit_data = training_data
         self.fit_label = training_label
 
     def predict(self, test_data: np.ndarray, k: int) -> np.ndarray:
+        """Return the predicted labels of the test data based on the training data."""
+
         # Classifier must be trained.
         if self.fit_data is None or self.fit_label is None:
             raise Exception("Classifier is untrained, cannot predict labels. (Remember to fit your classifier)")
@@ -37,6 +39,8 @@ class KNNClassifier:
 
     @staticmethod
     def check_accuracy(predicted_labels: np.ndarray, actual_labels: np.ndarray, print_info: bool = False) -> float:
+        """Return the accuracy of the predicted labels compared to the actual labels (represented as a decimal)."""
+
         # Label arrays must be defined.
         if predicted_labels is None or actual_labels is None:
             raise Exception("Label arrays cannot be None.")
@@ -57,6 +61,7 @@ class KNNClassifier:
 
     @staticmethod
     def split_data_label_from_file(file_path: str, delimiter: str = ", "):
+        """Return the data and label arrays from a file."""
 
         try:
             with open(file_path, "r") as fileio:
