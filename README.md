@@ -10,6 +10,8 @@
 from knn_classifier import KNNClassifier
 ```
 
+<br>
+
 # Using the package
 
 ## Fitting the classifier
