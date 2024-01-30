@@ -39,7 +39,7 @@ class KNNClassifier:
 
     @staticmethod
     def check_accuracy(predicted_labels: np.ndarray, actual_labels: np.ndarray, print_info: bool = False) -> float:
-        """Return the accuracy of the predicted labels compared to the actual labels (represented as a decimal)."""
+        """Return the proportion of the predicted labels that match the actual labels (represented as a decimal)."""
 
         # Label arrays must be defined.
         if predicted_labels is None or actual_labels is None:
