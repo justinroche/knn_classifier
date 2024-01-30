@@ -20,12 +20,12 @@ from knn_classifier import KNNClassifier
 > 1.2, 4.0, 22.2, 2.2, 3.0, 6.0\
 > ...
 
-Each line serves as a record and contains a list of its data points, with the record's label as the final item in the list. In the above examples, the labels are 5.0 and 6.0, respectively. Ensure that data points are separated by a consistent **delimiter** (e.g., a comma and a space).
+Each line serves as a record and contains a list of its data points (fields), with the record's label as the final item in the list. In the above examples, the labels are 5.0 and 6.0, respectively. Ensure that fields are separated by a consistent **delimiter** (e.g., a comma and a space).
 
 2. Split the data and label arrays from the files.
 ```python
 train_data, train_label = KNNClassifier.split_data_label_from_file("train.txt", delimiter=", ")
-test_data, test_label = KNNClassifier.split_data_label_from_file("test.txt", delimiter=", ")
+test_data, actual_label = KNNClassifier.split_data_label_from_file("test.txt", delimiter=", ")
 ```
 The static method `split_data_label_from_file` returns two numpy arrays. The first contains all columns except the last (the **data** columns), and the second contains the last column (the **label** column).
 
@@ -47,3 +47,12 @@ test_label_predictions = classifier.predict(test_data, k=5)
 The `predict` method returns the predicted labels of each record of the test data. Specify the k value to be used during prediction.
 > [!NOTE]
 > Ensure that the test data has the same number of fields as the training data. This is required for the algorithm to function correctly.
+
+2. Check the accuracy of the label predictions.
+```python
+accuracy: float = KNNClassifier.check_accuracy(test_label_predictions, actual_label, print_info=False)
+```
+
+The static method `check_accuracy` returns the proportion of the predicted labels that match the actual labels.
+
+You may also specify `print_info` (default: False). If set to True, each label will be printed individually.
