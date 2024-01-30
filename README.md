@@ -10,9 +10,9 @@
 from knn_classifier import KNNClassifier
 ```
 
-## Using the package
+# Using the package
 
-### Fitting the classifier
+## Fitting the classifier
 *Set up your training and test data and fit the classifier.*
 
 1. Populate two text files with your training and test data.
@@ -37,7 +37,9 @@ classifier = KNNClassifier()
 classifier.fit(train_data, train_label)
 ```
 
-### Making and checking predictions with the classifier
+<br>
+
+## Making and checking predictions with the classifier
 
 1. Compute and store label predictions for the test data.
 ```python
