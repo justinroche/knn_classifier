@@ -1,5 +1,6 @@
-import numpy as np
 from statistics import mode
+
+import numpy as np
 
 
 class KNNClassifier:

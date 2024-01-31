@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: knn-classifier
+Version: 0.0.1
+Summary: A k-nearest neighbors classifier in Python 3.11.7
+Author-email: Justin Roche <justinroche03@gmail.com>
+Project-URL: Homepage, https://github.com/justinroche/knn_classifier
+Project-URL: Issues, https://github.com/justinroche/knn_classifier/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # KNN Classifier
 **A k-Nearest Neighbors supervised classifier in Python 3.11.7**
 

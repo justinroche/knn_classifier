@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+knn_classifier.egg-info/PKG-INFO
+knn_classifier.egg-info/SOURCES.txt
+knn_classifier.egg-info/dependency_links.txt
+knn_classifier.egg-info/top_level.txt
